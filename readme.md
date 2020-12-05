@@ -1,0 +1,1 @@
+2020.12.05 Create main page without adaptive
