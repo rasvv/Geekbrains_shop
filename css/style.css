@@ -72,11 +72,6 @@ summary::-webkit-details-marker{
 	display: none;
 }
 
-summary::after{
-	/* padding: 0 1em 0 0.5em; */
-	/* content: url(../images/product/arrow.png); */
-}
-
 .menu{
 	position: absolute;
 	top: 0px;
@@ -132,9 +127,6 @@ summary::after{
 	position: relative;
 }
 
-/* .menu__caption summary{
-	display: none;
-} */
 
 .menu__item-caption::after{
 	content: url(../images/Close.svg);
@@ -159,8 +151,6 @@ summary::after{
 .menu__item-name{ 
 	color: #F16D7F;
 	padding: 24px 0 0;
-
-	/* margin-bottom: 5px; */
 }
 
 .menu__caption li {
