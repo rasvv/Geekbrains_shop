@@ -5,6 +5,10 @@ html{
 	color: #222222;
 }
 
+*{
+	box-sizing: border-box;
+}
+
 /* .container{
 	width: 1140px;
 	margin: 0 auto;
