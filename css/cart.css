@@ -139,6 +139,7 @@ max-width: 262px;
 	background-color: #F16D7F;
 	color: #fff;
 	border: none;
+	transition: all ease 500ms;
 }
 
 .summary{
@@ -147,9 +148,9 @@ max-width: 262px;
 	background-color: #F5F3F3;
 	margin-top: 40px;
 	padding: 39px 34px;
-display: flex;
-flex-direction: column;
-align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 }
 
 .summary__subtotal, 
