@@ -1,0 +1,175 @@
+.cart 
+	display: flex 
+	justify-content: space-between 
+	margin-top: 96px 
+ 
+
+	&__left 
+		width: 652px 
+	
+	&__item 
+		height: 306px 
+		display: flex 
+		box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13) 
+		position: relative 
+		margin-bottom: 40px 
+	
+		& a 
+			max-width: 262px 
+
+		&-caption 
+			display: block 
+			font-size: 24px 
+			line-height: 29px 
+			color: #222222 
+			margin-bottom: 42px 
+		
+		&-img 
+
+			height: 100% 
+		
+		&-price span 
+			color: #F16D7F
+		
+		&-quantity 
+			position: relative 
+		
+		&-input 
+			position: absolute 
+			left: 120px 
+			top: 0 
+			width: 43px 
+			height: 24px 
+			text-align: center 
+			border: 1px solid #EAEAEA 
+
+	&__close 
+		position: absolute 
+		top: 28px 
+		right: 22px 
+	
+		&:hover 
+			transition: all ease 500ms 
+			transform: rotate(360deg) 
+	
+	&__content 
+		padding: 22px 97px 22px 31px 
+	
+
+	&__buttons 
+		margin-top: 72px 
+		display: flex 
+		justify-content: space-between 
+	
+
+	&__button 
+		display: block 
+		width: 234px 
+		height: 49px 
+		border: 1px solid #A4A4A4 
+		font-size: 14px 
+		line-height: 49px 
+		text-align: center 
+		color: #000000 
+	
+		&:hover 
+			background-color: #F16D7F 
+			color: #fff 
+			border: none 
+			transition: all ease 500ms 
+
+	&__right 
+		width: 360px 
+
+ 
+.item__text 
+	font-size: 22px 
+	line-height: 26px 
+	color: #575757 	
+	margin-bottom: 6px 
+
+.adress 
+	height: 306px 
+ 
+
+	&__caption 
+		font-size: 16px 
+		line-height: 19px 
+		color: #222222 
+		padding: 22px 0 0 	
+	
+
+	&__text 
+		width: 100% 
+		height: 44px 
+		border: 1px solid #A4A4A4 
+		margin-top: 21px 
+		padding-left: 16px 
+		font-weight: 300 
+		font-size: 13px 
+		line-height: 16px 
+		color: #B1B1B1 
+		box-sizing: border-box 
+	
+
+		&.fill 
+			color: #B1B1B1 
+	
+
+	&__button 
+		margin-top: 24px 
+		font-size: 11px 
+		line-height: 34px 
+		width: 100px 
+		height: 34px 
+		border: 1px solid #A4A4A4 
+ 
+
+.summary 
+	height: 214px 
+	width: 360px 
+	background-color: #F5F3F3 
+	margin-top: 40px 
+	padding: 39px 34px 
+	display: flex 
+	flex-direction: column 
+	align-items: flex-end 
+ 
+
+	&__subtotal, 
+	&__total 
+		display: flex 
+		justify-content: end 
+		text-align: right 
+	
+
+	&__subtotal 
+		font-size: 11px 
+		line-height: 13px 
+		color: #4A4A4A 
+	
+
+	&__subtotal-label,
+	&__total-label 
+		margin-right: 30px 
+	
+
+	&__total 
+		margin-top: 12px 
+		font-size: 16px 
+		line-height: 19px 
+		color: #222222 
+	
+
+	&__total-price 
+		color: #F16D7F 
+		font-weight: bold 
+	
+
+	&__button 
+		display: block 
+
+		margin: 39px auto 0 
+		height: 50px 
+		width: 273px 
+ 
