@@ -5,7 +5,7 @@
 
 html
 	font-family: 'Lato', sans-serif
-	color: #222222
+	color: $mainTextColor
 
 *
 	box-sizing: border-box
@@ -14,7 +14,7 @@ ul
 	list-style: none
 
 .header
-	background-color: #222222
+	background-color: $mainTextColor
 	height: 70px
 	display: flex
 	justify-content: space-between
@@ -92,7 +92,7 @@ summary::-webkit-details-marker
 
 	&__caption[open]
 		/* position: relative  */
-		background-color: #fff
+		background-color: $invertColor
 		box-shadow: 0 0 10px #EBEBEB
 		z-index: 2
 
@@ -165,7 +165,7 @@ summary::-webkit-details-marker
 		line-height: 19px
 		font-weight: 400
 		text-align: center
-		color: #fff
+		color: $invertColor
 
 	&__h3
 		padding-top: 6px
@@ -196,6 +196,7 @@ summary::-webkit-details-marker
 	margin-top: 97px
 	text-align: center
 
+
 	& p
 		font-size: 14px
 		line-height: 17px
@@ -223,16 +224,40 @@ summary::-webkit-details-marker
 		position: relative
 		width: 360px
 		background-color: #F8F8F8
-
-	&_mb
-		margin-bottom: 30px
-
-	&__item:hover &__item-img
-		filter: brightness(50%)
 		transition: all ease 500ms
 
+		&:hover &-img
+			filter: brightness(50%)
+
+		&-img
+			position: relative
+			display: inline-block
+			/* height: 100%  */
+			width: 100%
+			transition: all ease 500ms
+
+		&-caption
+			color: #000
+			display: block
+			margin-top: 25px
+			padding: 0 16px
+			transition: all ease 500ms
+
+			&:hover
+				font-weight: bold
+
+
+		&-text
+			padding: 13px 16px 0 16px
+
+		&-price
+			padding: 18px 0 20px 16px
+			font-size: 16px
+			line-height: 19px
+			color: $mainColor
+
 	&__item:hover &__cart-add
-		color: #fff
+		color: $invertColor
 		display: flex
 
 	&__cart-add
@@ -241,35 +266,14 @@ summary::-webkit-details-marker
 		left: 111px
 		width: 139px
 		height: 44px
-		border: 1px solid #fff
+		border: 1px solid $invertColor
 		align-items: center
 		justify-content: space-around
 		display: none
 		font-size: 14px
 
-	&__cart-add:hover
-		box-shadow: 0 0 5px #fff
-
-	&__item-img
-		position: relative
-		display: inline-block
-		/* height: 100%  */
-		width: 100%
-
-	&__item-caption
-		color: #000
-		display: block
-		margin-top: 25px
-		padding: 0 16px
-
-	&__item-text
-		padding: 13px 16px 0 16px
-
-	&__item-price
-		padding: 18px 0 20px 16px
-		font-size: 16px
-		line-height: 19px
-		color: $mainColor
+		&:hover
+			box-shadow: 0 0 5px $invertColor		
 
 	&__button
 		margin-top: 18px
@@ -278,18 +282,22 @@ summary::-webkit-details-marker
 		line-height: 47px
 		height: 47px
 		width: 211px
-		border: 1px solid #FF6A6A
-		color: #F26376
-
-	&__button:hover
-		background: $mainColor
-		border: 1px solid #FF6A6A
-		color: #Fff
+		border: 1px solid $backgroundColor
+		color: $backgroundColor
 		transition: all ease 500ms
+
+		&:hover
+			background: $mainColor
+			border: 1px solid $backgroundColor
+			color: $invertColor
+
+
+	&_mb
+		margin-bottom: 30px
 
 .footer
 	margin-top: 96px
-	background-color: #222224
+	background-color: $mainTextColor
 	color: #FBFBFB
 
 	&__top
@@ -299,80 +307,80 @@ summary::-webkit-details-marker
 		margin: 0 auto
 		align-items: center
 
-	&__top-item
-		width: 360px
-		text-align: center
+		&-item
+			width: 360px
+			text-align: center
 
-	&__top-h4
-		font-size: 20px
-		line-height: 24px
-		font-weight: 400
-		margin-top: 28px
+		&-h4
+			font-size: 20px
+			line-height: 24px
+			font-weight: 400
+			margin-top: 28px
 
-	&__top-text
-		margin-top: 16px
-		font-size: 14px
-		line-height: 17px
-		font-weight: 100
+		&-text
+			margin-top: 16px
+			font-size: 14px
+			line-height: 17px
+			font-weight: 100
 
 	&__main
 		display: flex
 		justify-content: space-between
-		color: #222224
+		color: $mainTextColor
 		height: 448px
 		background: url("../images/footer__background.png") 0 0/100% 100% no-repeat
 
-	&__main-left, &__main-right
-		width: 360px
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
-		height: 100%
+		&-left, &-right
+			width: 360px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			height: 100%
 
-	&__main-right
-		width: 570px
+		&-right
+			width: 570px
 
-	&__main-p
-		margin-top: 32px
-		font-size: 20px
-		line-height: 24px
-		text-align: center
+		&-p
+			margin-top: 32px
+			font-size: 20px
+			line-height: 24px
+			text-align: center
 
-	&__main-title
-		font-size: 18px
-		font-weight: 400
-		line-height: 30px
-		text-align: center
+		&-title
+			font-size: 18px
+			font-weight: 400
+			line-height: 30px
+			text-align: center
 
-	&__main-title span
-		font-size: 24px
-		font-weight: 700
-		line-height: 38px
-		/* text-align: center  */
+		&-title span
+			font-size: 24px
+			font-weight: 700
+			line-height: 38px
+			/* text-align: center  */
 
-	&__main-input
-		height: calc(100% - 2px)
-		font-size: 14px
-		flex-basis: 70%
-		border-radius: 24.5px 0 0 24.5px
-		border: 0
-		padding-left: 22px
-		padding-right: 10px
-		background: #E1E1E1
+		&-input
+			height: calc(100% - 2px)
+			font-size: 14px
+			flex-basis: 70%
+			border-radius: 24.5px 0 0 24.5px
+			border: 0
+			padding-left: 22px
+			padding-right: 10px
+			background: #E1E1E1
 
-	&__main-button
-		height: 100%
-		font-size: 14px
-		color: #fff
-		flex-basis: 30%
-		border: 0
-		border-radius: 0 24.5px 24.5px 0
-		background: $mainColor
+		&-button
+			height: 100%
+			font-size: 14px
+			color: $invertColor
+			flex-basis: 30%
+			border: 0
+			border-radius: 0 24.5px 24.5px 0
+			background: $mainColor
 
-	&__main-button:hover
-		background: #E05C6E
-		transition: all ease 500ms
+			&:hover
+				background: $backgroundColor
+				transition: all ease 500ms
 
 	&__buttom
 		display: flex
@@ -380,31 +388,46 @@ summary::-webkit-details-marker
 		align-items: center
 		height: 79px
 
-	&__buttom-left
-		font-size: 16px
-		color: #FBFBFB
+		&-left
+			font-size: 16px
+			color: #FBFBFB
 
-	&__buttom-right
-		display: flex
-		justify-content: end
+		&-right
+			display: flex
+			justify-content: end
 
-	&__buttom-right a
-		display: flex
-		justify-content: center
-		align-items: center
-		height: 32px
-		width: 32px
-		background-color: #fff
-		/* display: inline-block  */
-		margin-left: 6px
+		&-right a
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 32px
+			width: 32px
+			background-color: $invertColor
+			/* display: inline-block  */
+			margin-left: 6px
 
-	&__buttom-link:hover
-		background: $mainColor
-		transition: all ease 500ms
+		&-nets
+			fill: $mainTextColor
+			height: 16px
+			width: 16px			
 
-	&__buttom-link:hover > &__buttom-nets
-		// filter: invert() 
-		transition: all ease 500ms
+		&-link
+			fill: $mainColor
+			text-align: center
+			align-items: center
+
+		&-link:hover
+			background: $backgroundColor
+			fill: $invertColor
+			transition: all ease 500ms
+
+		&-link:hover &-nets
+			// filter: invert() 
+			transition: all ease 500ms
+			fill: $invertColor
+
+
+	
 
 form
 	height: 49px

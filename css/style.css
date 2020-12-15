@@ -403,17 +403,46 @@ summary::-webkit-details-marker {
   position: relative;
   width: 360px;
   background-color: #F8F8F8;
-}
-
-.product_mb {
-  margin-bottom: 30px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .product__item:hover .product__item-img {
   -webkit-filter: brightness(50%);
           filter: brightness(50%);
+}
+
+.product__item-img {
+  position: relative;
+  display: inline-block;
+  /* height: 100%  */
+  width: 100%;
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
+}
+
+.product__item-caption {
+  color: #000;
+  display: block;
+  margin-top: 25px;
+  padding: 0 16px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
+.product__item-caption:hover {
+  font-weight: bold;
+}
+
+.product__item-text {
+  padding: 13px 16px 0 16px;
+}
+
+.product__item-price {
+  padding: 18px 0 20px 16px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #F16D7F;
 }
 
 .product__item:hover .product__cart-add {
@@ -444,31 +473,6 @@ summary::-webkit-details-marker {
           box-shadow: 0 0 5px #fff;
 }
 
-.product__item-img {
-  position: relative;
-  display: inline-block;
-  /* height: 100%  */
-  width: 100%;
-}
-
-.product__item-caption {
-  color: #000;
-  display: block;
-  margin-top: 25px;
-  padding: 0 16px;
-}
-
-.product__item-text {
-  padding: 13px 16px 0 16px;
-}
-
-.product__item-price {
-  padding: 18px 0 20px 16px;
-  font-size: 16px;
-  line-height: 19px;
-  color: #F16D7F;
-}
-
 .product__button {
   margin-top: 18px;
   display: inline-block;
@@ -476,21 +480,25 @@ summary::-webkit-details-marker {
   line-height: 47px;
   height: 47px;
   width: 211px;
-  border: 1px solid #FF6A6A;
-  color: #F26376;
-}
-
-.product__button:hover {
-  background: #F16D7F;
-  border: 1px solid #FF6A6A;
-  color: #Fff;
+  border: 1px solid #E05C6E;
+  color: #E05C6E;
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
 }
 
+.product__button:hover {
+  background: #F16D7F;
+  border: 1px solid #E05C6E;
+  color: #fff;
+}
+
+.product_mb {
+  margin-bottom: 30px;
+}
+
 .footer {
   margin-top: 96px;
-  background-color: #222224;
+  background-color: #222222;
   color: #FBFBFB;
 }
 
@@ -534,7 +542,7 @@ summary::-webkit-details-marker {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #222224;
+  color: #222222;
   height: 448px;
   background: url("../images/footer__background.png") 0 0/100% 100% no-repeat;
 }
@@ -655,15 +663,31 @@ summary::-webkit-details-marker {
   margin-left: 6px;
 }
 
+.footer__buttom-nets {
+  fill: #222222;
+  height: 16px;
+  width: 16px;
+}
+
+.footer__buttom-link {
+  fill: #F16D7F;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .footer__buttom-link:hover {
-  background: #F16D7F;
+  background: #E05C6E;
+  fill: #fff;
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
 }
 
-.footer__buttom-link:hover > .footer__buttom-nets {
+.footer__buttom-link:hover .footer__buttom-nets {
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
+  fill: #fff;
 }
 
 form {
@@ -878,7 +902,7 @@ summary::after {
 }
 
 .paginator__page.active {
-  color: #EF5B70;
+  color: #E05C6E;
 }
 
 .slider {
@@ -923,7 +947,7 @@ summary::after {
   margin-top: 12px;
   height: 3px;
   width: 63px;
-  background-color: #EF5B70;
+  background-color: #E05C6E;
 }
 
 .description__firm {
@@ -1064,11 +1088,11 @@ svg path {
   position: absolute;
   top: 28px;
   right: 22px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .cart__close:hover {
-  -webkit-transition: all ease 500ms;
-  transition: all ease 500ms;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -1096,14 +1120,14 @@ svg path {
   line-height: 49px;
   text-align: center;
   color: #000000;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .cart__button:hover {
   background-color: #F16D7F;
   color: #fff;
   border: none;
-  -webkit-transition: all ease 500ms;
-  transition: all ease 500ms;
 }
 
 .cart__right {

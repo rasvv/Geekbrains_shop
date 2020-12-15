@@ -10,7 +10,7 @@
 	&__caption 
 		font-size: 16px 
 		line-height: 19px 
-		color: #222222 
+		color: $mainTextColor 
 		font-weight: 300 
 	
 	&__text 
@@ -54,13 +54,13 @@
 		margin-left: 20px 
 	
 	&__button:hover 
-		background-color: #F16D7F 
-		color: #fff 
-		border: 1px solid #F16D7F 
+		background-color: $mainColor 
+		color: $invertColor
+		border: 1px solid $mainColor
 		transition: all ease 500ms 
 	
 	&__button:hover svg path 
-		fill: #fff 
+		fill: $invertColor
 		transition: all ease 500ms 
 	
 	&__right * 
@@ -95,7 +95,7 @@
 .info__item 
 	margin-top: 16px 
 
-.info__item::before 
-	content: url("../images/Check.svg") 
-	margin-right: 22px 
+	&::before 
+		content: url("../images/Check.svg") 
+		margin-right: 22px 
  

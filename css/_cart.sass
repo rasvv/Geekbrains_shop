@@ -21,7 +21,7 @@
 			display: block 
 			font-size: 24px 
 			line-height: 29px 
-			color: #222222 
+			color: $mainTextColor 
 			margin-bottom: 42px 
 		
 		&-img 
@@ -29,7 +29,7 @@
 			height: 100% 
 		
 		&-price span 
-			color: #F16D7F
+			color: $mainColor
 		
 		&-quantity 
 			position: relative 
@@ -47,9 +47,9 @@
 		position: absolute 
 		top: 28px 
 		right: 22px 
-	
+		transition: all ease 500ms 	
+		
 		&:hover 
-			transition: all ease 500ms 
 			transform: rotate(360deg) 
 	
 	&__content 
@@ -71,12 +71,13 @@
 		line-height: 49px 
 		text-align: center 
 		color: #000000 
+		transition: all ease 500ms 
 	
 		&:hover 
-			background-color: #F16D7F 
-			color: #fff 
+			background-color: $mainColor
+			color: $invertColor 
 			border: none 
-			transition: all ease 500ms 
+
 
 	&__right 
 		width: 360px 
@@ -95,7 +96,7 @@
 	&__caption 
 		font-size: 16px 
 		line-height: 19px 
-		color: #222222 
+		color: $mainTextColor 
 		padding: 22px 0 0 	
 	
 
@@ -158,11 +159,11 @@
 		margin-top: 12px 
 		font-size: 16px 
 		line-height: 19px 
-		color: #222222 
+		color: $mainTextColor 
 	
 
 	&__total-price 
-		color: #F16D7F 
+		color: $mainColor
 		font-weight: bold 
 	
 
