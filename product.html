@@ -68,21 +68,29 @@
 		<div class="description__long-line"></div>
 
 		<div class="description__filter">
-			<details>
-				<summary class="filter__caption filter__caption-trend">CHOOSE COLOR</summary>
-			</details>
-			<details class="filter__caption filter__caption-size">
-				<summary>CHOOSE SIZE </summary>
-				<ul>
-					<li><input type="checkbox" name="XS" id="">XS</li>
-					<li><input type="checkbox" name="S" id="">S</li>
-					<li><input type="checkbox" name="M" id="">M</li>
-					<li><input type="checkbox" name="L" id="">L</li>
-				</ul>
-			</details>
-			<details>
-				<summary class="filter__caption filter__caption-price">QUANTITY</summary>
-			</details>
+			<div class="description__filter-box">
+				<details class="description__filter-item">
+					<summary class="description__filter-caption filter__caption-trend">CHOOSE COLOR</summary>
+				</details>				
+			</div>
+			<div class="description__filter-box">
+				<details class="description__filter-caption filter__caption filter__caption-size">
+					<summary>CHOOSE SIZE </summary>
+					<ul>
+						<li><input type="checkbox" name="XS" id=""><span>XS</span></li>
+						<li><input type="checkbox" name="S" id=""><span>S</span></li>
+						<li><input type="checkbox" name="M" id=""><span>M</span></li>
+						<li><input type="checkbox" name="L" id=""><span>L</span></li>
+					</ul>
+				</details>
+			</div>
+
+			<div class="description__filter-box">
+				<details class="description__filter-item">
+					<summary class="filter__caption filter__caption-price">QUANTITY</summary>
+				</details>
+			</div>
+
 		</div>
 
 		<a class="description__button product__button" href="cart.html"><img src="images/basket-pink.svg" alt="cart">Add

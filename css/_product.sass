@@ -63,6 +63,29 @@
 		margin-top: 65px
 		min-width: 500px
 
+		&-box
+			min-width: 120px
+			position: relative
+			text-align: center
+
+		&-caption
+			min-width: 100px
+
+			&[open]
+				position: absolute
+				padding-top: 0
+				left: 8px
+				top: 0
+				width: 106px
+				text-align: left
+
+				& li
+					padding-left: 15px
+
+				& li span
+					padding-left: 10px
+					// padding-right: 20px
+
 	&__button
 		display: flex
 		align-items: center
