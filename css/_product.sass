@@ -18,8 +18,7 @@
 	background-color: $invertColor
 
 	&__collection
-		font-size: 14px
-		line-height: 17px
+		+font(14px, 17px, 300)
 		text-align: center
 		color: $mainColor
 		margin-top: 64px
@@ -31,23 +30,19 @@
 		background-color: $backgroundColor
 
 	&__firm
-		font-size: 12px
-		line-height: 22px
+		+font(18px, 22px, 300)
 		color: #4D4D4D
 		margin-top: 27px
 
 	&__text
-		font-size: 14px
-		font-weight: 300
-		line-height: 17px
+		+font(14px, 17px, 300)
 		text-align: center
 		color: #5E5E5E
 		width: 555px
 		margin-top: 48px
 
 	&__price
-		font-size: 24px
-		line-height: 29px
+		+font(24px, 29px, 300)
 		color: #EF5B70
 		margin-top: 32px
 
@@ -64,7 +59,7 @@
 		min-width: 500px
 
 		&-box
-			min-width: 120px
+			min-width: 139px
 			position: relative
 			text-align: center
 
@@ -76,15 +71,8 @@
 				padding-top: 0
 				left: 8px
 				top: 0
-				width: 106px
+				width: 140px
 				text-align: left
-
-				& li
-					padding-left: 15px
-
-				& li span
-					padding-left: 10px
-					// padding-right: 20px
 
 	&__button
 		display: flex

@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300 400 700 900&display=swap')
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300 400 700 900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap')
 
 @import "reset"
 @import "vars"
+@import "mixins"
 
 html
 	font-family: 'Lato', sans-serif
@@ -58,14 +60,16 @@ ul
 		justify-content: center
 
 		&-title
-			font-size: 48px
-			font-weight: 900
+			// font-size: 48px
+			// font-weight: 900
+			+font(48px, 48px, 900)
 			padding: 0
 			margin: 0
 
 		&-text
-			font-size: 32px
-			font-weight: 700
+			// font-size: 32px
+			// font-weight: 700
+			+font(32px, 32px, 700)
 
 		&-text span
 			color: $mainColor
@@ -161,17 +165,13 @@ summary::-webkit-details-marker
 		position: relative
 
 	&__p
-		font-size: 16px
-		line-height: 19px
-		font-weight: 400
+		+font(16px, 19px, 400)
 		text-align: center
 		color: $invertColor
 
 	&__h3
 		padding-top: 6px
-		font-size: 24px
-		line-height: 29px
-		font-weight: 700
+		+font(24px, 29px, 700)
 		text-align: center
 		color: $mainColor
 
@@ -197,15 +197,11 @@ summary::-webkit-details-marker
 	text-align: center
 
 	& p
-		font-size: 14px
-		line-height: 17px
 		color: #5D5D5D
-		font-weight: 300
+		+font(14px, 17px, 300)
 
 	&__caption h4
-		font-size: 30px
-		line-height: 36px
-		font-weight: 400
+		+font(30px, 36px, 400)
 
 	&__caption p
 		color: #9F9F9F
@@ -250,8 +246,7 @@ summary::-webkit-details-marker
 
 		&-price
 			padding: 18px 0 20px 16px
-			font-size: 16px
-			line-height: 19px
+			+font(16px, 19px, 300)
 			color: $mainColor
 
 	&__item:hover &__cart-add
@@ -276,8 +271,7 @@ summary::-webkit-details-marker
 	&__button
 		margin-top: 18px
 		display: inline-block
-		font-size: 16px
-		line-height: 47px
+		+font(16px, 47px, 300)
 		height: 47px
 		width: 211px
 		border: 1px solid $backgroundColor
@@ -309,16 +303,12 @@ summary::-webkit-details-marker
 			text-align: center
 
 		&-h4
-			font-size: 20px
-			line-height: 24px
-			font-weight: 400
+			+font(20px, 24px, 400)
 			margin-top: 28px
 
 		&-text
 			margin-top: 16px
-			font-size: 14px
-			line-height: 17px
-			font-weight: 100
+			+font(14px, 17px, 100)
 
 	&__main
 		display: flex
@@ -340,20 +330,15 @@ summary::-webkit-details-marker
 
 		&-p
 			margin-top: 32px
-			font-size: 20px
-			line-height: 24px
+			+font(20px, 24px, 400)
 			text-align: center
 
 		&-title
-			font-size: 18px
-			font-weight: 400
-			line-height: 30px
+			+font(18px, 30px, 400)
 			text-align: center
 
 		&-title span
-			font-size: 24px
-			font-weight: 700
-			line-height: 38px
+			+font(24px, 38px, 700)
 			/* text-align: center  */
 
 		&-input
