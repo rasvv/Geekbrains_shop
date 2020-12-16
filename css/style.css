@@ -316,6 +316,13 @@ summary::-webkit-details-marker {
 
 .catalog__item, .catalog__big {
   position: relative;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
+.catalog__item:hover {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 .catalog__p {
@@ -407,6 +414,11 @@ summary::-webkit-details-marker {
   background-color: #F8F8F8;
   -webkit-transition: all ease 500ms;
   transition: all ease 500ms;
+}
+
+.product__item:hover .product__item-img {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 .product__item:hover .product__item-img {
@@ -1301,7 +1313,7 @@ svg path {
   height: 44px;
   border: 1px solid #A4A4A4;
   margin-top: 21px;
-  padding-left: 16px;
+  padding: 0 16px;
   font-size: 13px;
   line-height: 16px;
   font-weight: 300;

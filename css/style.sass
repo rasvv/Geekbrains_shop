@@ -163,6 +163,10 @@ summary::-webkit-details-marker
 
 	&__item, &__big
 		position: relative
+		transition: all ease 500ms
+
+	&__item:hover
+		transform: scale(1.025)
 
 	&__p
 		+font(16px, 19px, 400)
@@ -220,6 +224,9 @@ summary::-webkit-details-marker
 		width: 360px
 		background-color: #F8F8F8
 		transition: all ease 500ms
+
+		&:hover &-img
+			transform: scale(1.025)
 
 		&:hover &-img
 			filter: brightness(50%)
