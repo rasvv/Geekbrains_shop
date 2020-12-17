@@ -4,6 +4,7 @@
 @import "reset"
 @import "vars"
 @import "mixins"
+@import "snow"
 
 html
 	font-family: 'Lato', sans-serif
@@ -168,16 +169,13 @@ summary::-webkit-details-marker
 	&__item:hover
 		transform: scale(1.025)
 
-	&__p
-		+font(16px, 19px, 400)
-		text-align: center
-		color: $invertColor
-
-	&__h3
-		padding-top: 6px
-		+font(24px, 29px, 700)
-		text-align: center
-		color: $mainColor
+	// &__item::after
+	// 	position: absolute
+	// 	background-image: "../images/snowbank.png"
+	// 	width: 100%
+	// 	left: 0
+	// 	top: 0
+	// 	z-index: 10
 
 	&__item:not(:last-child)
 		margin-right: 30px
@@ -195,6 +193,17 @@ summary::-webkit-details-marker
 
 	&__big
 		margin-top: 30px
+
+	&__p
+		+font(16px, 19px, 400)
+		text-align: center
+		color: $invertColor
+
+	&__h3
+		padding-top: 6px
+		+font(24px, 29px, 700)
+		text-align: center
+		color: $mainColor
 
 .product
 	margin-top: 97px
@@ -225,7 +234,7 @@ summary::-webkit-details-marker
 		background-color: #F8F8F8
 		transition: all ease 500ms
 
-		&:hover &-img
+		&:hover
 			transform: scale(1.025)
 
 		&:hover &-img
