@@ -61,15 +61,11 @@ ul
 		justify-content: center
 
 		&-title
-			// font-size: 48px
-			// font-weight: 900
 			+font(48px, 48px, 900)
 			padding: 0
 			margin: 0
 
 		&-text
-			// font-size: 32px
-			// font-weight: 700
 			+font(32px, 32px, 700)
 
 		&-text span
@@ -161,6 +157,7 @@ summary::-webkit-details-marker
 
 	& img
 		width: 100%
+		position: relative
 
 	&__item, &__big
 		position: relative
@@ -168,14 +165,6 @@ summary::-webkit-details-marker
 
 	&__item:hover
 		transform: scale(1.025)
-
-	// &__item::after
-	// 	position: absolute
-	// 	background-image: "../images/snowbank.png"
-	// 	width: 100%
-	// 	left: 0
-	// 	top: 0
-	// 	z-index: 10
 
 	&__item:not(:last-child)
 		margin-right: 30px
@@ -194,6 +183,9 @@ summary::-webkit-details-marker
 	&__big
 		margin-top: 30px
 
+		&::after
+			content: none
+
 	&__p
 		+font(16px, 19px, 400)
 		text-align: center
@@ -204,6 +196,21 @@ summary::-webkit-details-marker
 		+font(24px, 29px, 700)
 		text-align: center
 		color: $mainColor
+
+.button
+	margin-top: 18px
+	display: inline-block
+	+font(16px, 47px, 300)
+	height: 47px
+	width: 211px
+	border: 1px solid $backgroundColor
+	color: $backgroundColor
+	transition: all ease 500ms
+
+	&:hover
+		background: $mainColor
+		border: 1px solid $backgroundColor
+		color: $invertColor
 
 .product
 	margin-top: 97px
@@ -247,6 +254,16 @@ summary::-webkit-details-marker
 			width: 100%
 			transition: all ease 500ms
 
+			&::after
+				position: absolute
+				content: url('../images/snowbank.png')
+				width: 320px
+				height: 50px
+				left: 0
+				top: 0
+				z-index: 10
+				border: none
+
 		&-caption
 			color: #000
 			display: block
@@ -283,21 +300,6 @@ summary::-webkit-details-marker
 
 		&:hover
 			box-shadow: 0 0 15px $invertColor
-
-	&__button
-		margin-top: 18px
-		display: inline-block
-		+font(16px, 47px, 300)
-		height: 47px
-		width: 211px
-		border: 1px solid $backgroundColor
-		color: $backgroundColor
-		transition: all ease 500ms
-
-		&:hover
-			background: $mainColor
-			border: 1px solid $backgroundColor
-			color: $invertColor
 
 	&_mb
 		margin-bottom: 30px
