@@ -98,6 +98,10 @@ input, select {
   vertical-align: middle;
 }
 
+.snowflakes {
+  display: none;
+}
+
 @-webkit-keyframes snowflakes-fall {
   0% {
     top: -10%;
@@ -144,6 +148,48 @@ input, select {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
+}
+
+@-webkit-keyframes cart-moving {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes cart-moving {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.snowflakes {
+  display: block;
 }
 
 .snowflake {
@@ -283,6 +329,39 @@ ul {
   padding-right: calc(50% - 570px);
 }
 
+.button {
+  margin-top: 18px;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 47px;
+  font-weight: 300;
+  height: 47px;
+  width: 211px;
+  border: 1px solid #E05C6E;
+  color: #E05C6E;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
+.button:hover {
+  background: #F16D7F;
+  border: 1px solid #E05C6E;
+  color: #fff;
+}
+
+.button__close {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
+.button__close:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
 .promo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,6 +439,7 @@ summary::-webkit-details-marker {
   width: 232px;
   font-size: 14px;
   line-height: 17px;
+  font-weight: 400;
 }
 
 .menu:hover {
@@ -378,6 +458,12 @@ summary::-webkit-details-marker {
   -webkit-box-shadow: 0 0 10px #EBEBEB;
           box-shadow: 0 0 10px #EBEBEB;
   z-index: 2;
+}
+
+.menu__item li {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
 }
 
 .menu__item.hide {
@@ -403,16 +489,6 @@ summary::-webkit-details-marker {
   color: #000;
   padding-right: 11px;
   position: relative;
-}
-
-.menu__item-caption::after {
-  content: url(../images/Close.svg);
-  position: absolute;
-  z-index: 3;
-  height: 100%;
-  width: 100%;
-  top: -20px;
-  left: 166px;
 }
 
 .menu__item-caption:hover {
@@ -522,26 +598,6 @@ summary::-webkit-details-marker {
   font-weight: 700;
   text-align: center;
   color: #F16D7F;
-}
-
-.button {
-  margin-top: 18px;
-  display: inline-block;
-  font-size: 16px;
-  line-height: 47px;
-  font-weight: 300;
-  height: 47px;
-  width: 211px;
-  border: 1px solid #E05C6E;
-  color: #E05C6E;
-  -webkit-transition: all ease 500ms;
-  transition: all ease 500ms;
-}
-
-.button:hover {
-  background: #F16D7F;
-  border: 1px solid #E05C6E;
-  color: #fff;
 }
 
 .product {
@@ -1217,11 +1273,19 @@ summary::after {
 
 .description__button img {
   margin-right: 10px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
 }
 
 .description__button:hover img {
   -webkit-filter: brightness(3.5) invert(0);
           filter: brightness(3.5) invert(0);
+  -webkit-animation-name: cart-moving;
+          animation-name: cart-moving;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .product__product {
@@ -1292,19 +1356,6 @@ svg path {
   height: 24px;
   text-align: center;
   border: 1px solid #EAEAEA;
-}
-
-.cart__close {
-  position: absolute;
-  top: 28px;
-  right: 22px;
-  -webkit-transition: all ease 500ms;
-  transition: all ease 500ms;
-}
-
-.cart__close:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 .cart__content {

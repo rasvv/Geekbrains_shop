@@ -4,6 +4,9 @@
 @import "reset"
 @import "vars"
 @import "mixins"
+
+.snowflakes
+	display: none
 @import "snow"
 
 html
@@ -29,6 +32,30 @@ ul
 .center
 	padding-left: calc(50% - 570px)
 	padding-right: calc(50% - 570px)
+
+.button
+	margin-top: 18px
+	display: inline-block
+	+font(16px, 47px, 300)
+	height: 47px
+	width: 211px
+	border: 1px solid $backgroundColor
+	color: $backgroundColor
+	transition: all ease 500ms
+
+	&:hover
+		background: $mainColor
+		border: 1px solid $backgroundColor
+		color: $invertColor
+
+	&__close
+		position: absolute
+		top: 28px
+		right: 22px
+		transition: all ease 500ms
+
+		&:hover
+			transform: rotate(360deg)
 
 .promo
 	display: flex
@@ -79,14 +106,12 @@ summary::-webkit-details-marker
 	top: 0px
 	left: 570px
 	width: 232px
-	font-size: 14px
-	line-height: 17px
+	+font(14px, 17px, 400)
 
 	&:hover
 		display: block
 
 	&__caption
-
 		height: 763px
 		padding: 37px 0 0 34px
 		font-weight: bold
@@ -96,6 +121,9 @@ summary::-webkit-details-marker
 		background-color: $invertColor
 		box-shadow: 0 0 10px #EBEBEB
 		z-index: 2
+
+	&__item li
+		+font(14px, 17px, 400)
 
 	&__item.hide
 		/* display: none  */
@@ -116,15 +144,6 @@ summary::-webkit-details-marker
 		color: #000
 		padding-right: 11px
 		position: relative
-
-	&__item-caption::after
-		content: url(../images/Close.svg)
-		position: absolute
-		z-index: 3
-		height: 100%
-		width: 100%
-		top: -20px
-		left: 166px
 
 	&__item-caption:hover
 		cursor: pointer
@@ -196,21 +215,6 @@ summary::-webkit-details-marker
 		+font(24px, 29px, 700)
 		text-align: center
 		color: $mainColor
-
-.button
-	margin-top: 18px
-	display: inline-block
-	+font(16px, 47px, 300)
-	height: 47px
-	width: 211px
-	border: 1px solid $backgroundColor
-	color: $backgroundColor
-	transition: all ease 500ms
-
-	&:hover
-		background: $mainColor
-		border: 1px solid $backgroundColor
-		color: $invertColor
 
 .product
 	margin-top: 97px
