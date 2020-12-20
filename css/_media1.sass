@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1139px)
+@media  (max-width: 1139px)
 	.center
 		padding: 0
 	.header
@@ -6,11 +6,59 @@
 		padding: 0 32px
 
 	.promo
-		height: 367зч
+		height: auto
 
 		&__center
 			padding-left: none
 
 			/* padding-right: calc(50% - 800px)  */
-		&__left img
+
+		&__left
+			flex-grow: 1
+
+			& img
+				object-fit: contain
+				height: 100%
+				width: 100%
+
+		&__right
+			flex-grow: 1
 			height: 100%
+			align-items: start
+
+		&__caption
+			padding-left: 64px
+			height: 100%
+
+			&-title
+				+font(44px, 53px, 900)
+
+			&-text
+				+font(24px, 29px, 700)
+
+	.catalog
+		&-box
+			margin: 18px 30px 0 30px
+
+		& img
+			// height: 167px
+
+		&__item
+			width: calc(33.333%  - 16px)
+
+		&__item, &__big
+
+		&__item-caption
+
+		&__big
+			width: 100%
+
+			& img
+				width: 100%
+
+			&::after
+				content: none
+
+		&__p
+
+		&__h3
