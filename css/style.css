@@ -134,6 +134,13 @@ ul {
   padding-left: 41px;
 }
 
+.header__link img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+}
+
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
@@ -835,10 +842,18 @@ form {
 
 .filter__item-caption {
   padding-right: 11px;
+  position: relative;
+  font-weight: 600;
+}
+
+.filter__item-caption img {
+  position: absolute;
+  left: 65px;
+  top: 3px;
 }
 
 .filter__item-caption::after {
-  content: url(../images/product/filter.svg);
+  content: none;
 }
 
 .filter__item-name {
@@ -963,12 +978,7 @@ summary::after {
 .slider {
   height: 777px;
   background-color: #F7F7F7;
-}
-
-.slider video {
-  width: 1140px;
-  height: 650px;
-  top: 0;
+  text-align: center;
 }
 
 .description {
@@ -988,6 +998,8 @@ summary::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
+  position: relative;
+  z-index: 5;
 }
 
 .description__collection {
@@ -1567,6 +1579,21 @@ svg path {
   .paginator {
     margin: 24px auto 64px;
   }
+  .slider {
+    height: 624px;
+  }
+  .slider img {
+    height: 100%;
+  }
+  .description {
+    margin: 0 auto;
+    width: 100vw;
+    height: 600px;
+  }
+  .description__text {
+    width: 100%;
+    padding: 0 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1705,16 +1732,50 @@ svg path {
   .subheader__path {
     margin-top: 32px;
   }
-  .filter__item-caption {
-    margin-left: -60px;
-    height: 25px;
+  .filter__caption-first {
+    height: 100%;
+    width: 100%;
   }
-  .filter__item-caption::after {
-    padding-left: 22px;
+  .filter__item-first {
+    width: 0;
+  }
+  .filter__item-second {
+    width: 100%;
+  }
+  .filter__item-caption {
+    color: #fff;
+    display: block;
+    padding: 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
+  .filter__item-caption img {
+    margin-left: -55px;
+    padding: 0;
     width: 38px;
     height: 25px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .slider img {
+    width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  .description__long-line {
+    margin-top: 32px;
+    width: 174px;
+    padding: 0 100px;
+  }
+  .description__filter {
+    margin-top: 50px;
+  }
+  .description__button {
+    margin-top: 64px;
+  }
+  .product-footer__top {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
