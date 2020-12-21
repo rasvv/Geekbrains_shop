@@ -175,6 +175,7 @@ summary::-webkit-details-marker
 	padding-top: 64px
 	display: flex
 	justify-content: space-between
+	column-gap: 30px
 	// flex-wrap: wrap
 
 	& img
@@ -188,8 +189,8 @@ summary::-webkit-details-marker
 	&__item:hover
 		transform: scale(1.025)
 
-	&__item:not(:last-child)
-		margin-right: 30px
+	// &__item:not(:last-child)
+	// 	margin-right: 30px
 
 	&__item-caption
 		position: absolute
@@ -241,6 +242,7 @@ summary::-webkit-details-marker
 		display: flex
 		justify-content: space-between
 		flex-wrap: wrap
+		column-gap: 30px
 
 	&__item
 		position: relative
@@ -445,3 +447,4 @@ form
 @import "cart"
 @import "registration"
 @import "media1"
+@import "media2"

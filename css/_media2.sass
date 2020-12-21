@@ -1,32 +1,28 @@
-@media  (max-width: 1139px)
+@media  (max-width: 767px)
 	.center
 		padding: 0
 	.header
 		width: 100vw
 		padding: 0 32px
 
+		&__link-cart
+			display: none
+
+		&__link-registration
+			display: none
+
 	.promo
-		height: 370px
-		flex: 1 1
 
 		&__center
-			padding-left: none
-
-			/* padding-right: calc(50% - 800px)  */
 
 		&__left
-			// flex-grow: 1
+			width: 0
 
 			& img
-				object-fit: contain
-				height: 100%
-				width: 100%
 
 		&__right
-			// flex-grow: 1
-			height: 100%
-			justify-content: center
-			padding-left: 40px
+
+			padding-left: 0
 
 		&__caption
 			padding-left: 16px
@@ -39,37 +35,38 @@
 				+font(24px, 29px, 700)
 
 	.catalog
-		margin-top: 20px
-		column-gap: 20px
+		row-gap: 32px
+		flex-direction: column
+
 		&-box
-			padding: 0 16px
+			margin: 18px 16px 0 16px
+
 		& img
 			// height: 167px
 
 		&__item
-			width: 33.333%
+			width: 100%
 
 		&__item, &__big
 
 		&__item-caption
 
 		&__big
-			width: 100%
-			margin-top: 20px
+			height: 111px
 
 			& img
-				width: 100%
+				height: 100%
+				object-fit: cover
 
 			&::after
-				content: none
 
 		&__p
 
 		&__h3
 
 	.product
-		margin-top: 154px
-		padding: 0 16px
+		margin-top: 64px
+
 		& p
 
 		&__caption h4
@@ -77,9 +74,9 @@
 		&__caption p
 
 		&__items
-			margin-top: 74px
-			column-gap: 16px
-			justify-content: space-around
+			margin-top: 64px
+			justify-content: center
+
 		&__item
 
 			&:hover
@@ -98,8 +95,6 @@
 
 			&-price
 
-				+font(16px, 19px, 300)
-
 		&__item:hover &__cart-add
 
 		&__cart-add
@@ -107,7 +102,6 @@
 			&:hover
 
 		&_mb
-			margin-bottom: 16px
 
 	.footer
 		margin-top: 65px
@@ -125,11 +119,9 @@
 			&-text
 
 		&__main
-			height: 614px
-			flex-direction: column
-			align-items: center
+			height: 550px
 			padding-top: 54px
-			padding-bottom: 140px
+			padding-bottom: 109px
 
 			&-left, &-right
 				height: auto
@@ -138,11 +130,15 @@
 				width: 570px
 
 			&-p
+				+font(18px, 21px, 400)
 
 			&-title
+				+font(14px, 21px, 400)
+				text-align: center
 
 			&-title span
-
+				+font(24px, 38px, 700)
+				/* text-align: center  */
 			&-input
 
 			&-button
@@ -150,7 +146,9 @@
 				&:hover
 
 		&__buttom
-			padding: 0 32px
+			height: 143px
+			flex-direction: column-reverse
+			padding: 43px 32px 9px
 
 			&-left
 
