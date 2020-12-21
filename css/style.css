@@ -859,8 +859,8 @@ form {
   cursor: pointer;
 }
 
-.filter__caption.first {
-  padding: 13px 16px 24px 16px;
+.filter__caption-first {
+  padding: 13px 16px 24px 0px;
   color: #6F6E6E;
 }
 
@@ -1428,6 +1428,7 @@ svg path {
     padding: 0 32px;
   }
   .promo {
+    padding: 0;
     height: 370px;
     -webkit-box-flex: 1;
         -ms-flex: 1 1;
@@ -1536,12 +1537,39 @@ svg path {
   .footer__buttom {
     padding: 0 32px;
   }
+  .subheader {
+    padding: 0 16px;
+  }
+  .filter {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 66px;
+    padding-left: 16px;
+  }
+  .filter__item {
+    width: 50%;
+  }
+  .filter__item-none {
+    display: none;
+  }
+  .filter__item-second {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .catalog__product {
+    margin-top: 16px;
+  }
+  .catalog__product-items {
+    margin-top: 0px;
+  }
+  .paginator {
+    margin: 24px auto 64px;
+  }
 }
 
 @media (max-width: 767px) {
-  .center {
-    padding: 0;
-  }
   .header {
     width: 100vw;
     padding: 0 32px;
@@ -1601,6 +1629,12 @@ svg path {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .catalog__product {
+    margin-top: 16px;
+  }
+  .catalog__product-items {
+    margin-top: 0px;
+  }
   .footer {
     margin-top: 65px;
     width: 100%;
@@ -1648,6 +1682,39 @@ svg path {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     padding: 43px 32px 9px;
+  }
+  .subheader {
+    padding: 0 16px;
+    display: block;
+  }
+  .subheader__left {
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subheader__right {
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .subheader__captoin {
+    margin-top: 24px;
+  }
+  .subheader__path {
+    margin-top: 32px;
+  }
+  .filter__item-caption {
+    margin-left: -60px;
+    height: 25px;
+  }
+  .filter__item-caption::after {
+    padding-left: 22px;
+    width: 38px;
+    height: 25px;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 /*# sourceMappingURL=style.css.map */
