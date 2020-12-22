@@ -1,0 +1,467 @@
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300 400 700 900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap')
+
+@import "reset"
+@import "vars"
+@import "mixins"
+@import "keyframes"
+
+.snowflakes
+	display: none
+// @import "snow"
+
+html
+	font-family: 'Lato', sans-serif
+	color: $mainTextColor
+
+*
+	box-sizing: border-box
+
+ul
+	list-style: none
+
+.header
+	background-color: $mainTextColor
+	height: 70px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+	&__link:not(:first-child)
+		padding-left: 41px
+
+	&__link img:hover
+		transform: scale(1.1)
+		transition: all ease 500ms
+
+.center
+	padding-left: calc(50% - 570px)
+	padding-right: calc(50% - 570px)
+
+.button
+	margin-top: 18px
+	display: inline-block
+	+font(16px, 47px, 300)
+	height: 47px
+	width: 211px
+	border: 1px solid $backgroundColor
+	color: $backgroundColor
+	transition: all ease 500ms
+
+	&:hover
+		background: $mainColor
+		border: 1px solid $backgroundColor
+		color: $invertColor
+
+	&__close
+		position: absolute
+		top: 28px
+		right: 22px
+		transition: all ease 500ms
+
+		&:hover
+			transform: rotate(360deg)
+
+.promo
+	display: flex
+	height: 800px
+	background-color: rgba(113, 103, 105, 0.08)
+
+	&__center
+		padding-left: calc(50% - 800px)
+		/* padding-right: calc(50% - 800px)  */
+	&__left
+		width: 50%
+		display: flex
+		justify-content: center
+		height: 100%
+		text-align: center
+
+		& img
+			height: 100%
+			// min-width: 100%
+			object-fit: contain
+			// object-position: center
+			// text-align: center
+
+	&__right
+		display: flex
+		align-items: center
+		width: 50%
+		height: 100%
+		background-color: #F1E4E6
+		padding-left: 63px
+		position: relative
+
+	&__caption
+		height: 92px
+		max-width: 800px
+		border-left: 12px solid $mainColor
+		padding-left: 16px
+		display: flex
+		flex-direction: column
+		justify-content: center
+
+		&-title
+			+font(48px, 48px, 900)
+			padding: 0
+			margin: 0
+
+		&-text
+			+font(32px, 32px, 700)
+
+		&-text span
+			color: $mainColor
+
+summary::-webkit-details-marker
+	display: none
+
+.menu
+	position: absolute
+	top: 0px
+	left: 570px
+	width: 232px
+	+font(14px, 17px, 400)
+
+	&:hover
+		display: block
+
+	&__caption
+		height: 763px
+		padding: 37px 0 0 34px
+		font-weight: bold
+
+	&__caption[open]
+		/* position: relative  */
+		background-color: $invertColor
+		box-shadow: 0 0 10px #EBEBEB
+		z-index: 2
+
+	&__item li
+		+font(14px, 17px, 400)
+
+	&__item.hide
+		/* display: none  */
+
+	&__item:hover .menu__item-caption
+		color: $mainColor
+
+	&__item-icon
+		height: 10px
+		width: 15px
+		fill: blue
+
+	&__item-icon:hover
+		fill: red
+
+	&__item-caption
+		font-weight: bold
+		color: #000
+		padding-right: 11px
+		position: relative
+
+	&__item-caption:hover
+		cursor: pointer
+
+	&__item-caption:hover::after
+		left: 184px
+		transform: scale(1.2)
+		transition: all ease 500ms
+
+	&__item-name
+		color: $mainColor
+		padding: 24px 0 0
+
+	&__caption li
+		padding: 11px 0 0 17px
+		color: $lightTextColor
+
+	&__caption a:hover
+		color: $mainColor
+		cursor: pointer
+
+	&__caption a
+		color: $lightTextColor
+
+.hide
+	display: none
+
+.catalog
+	padding-top: 64px
+	display: flex
+	justify-content: space-between
+	column-gap: 30px
+	// flex-wrap: wrap
+
+	& img
+		width: 100%
+		position: relative
+
+	&__item, &__big
+		position: relative
+		transition: all ease 500ms
+
+	&__item:hover
+		transform: scale(1.025)
+
+	// &__item:not(:last-child)
+	// 	margin-right: 30px
+
+	&__item-caption
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__big
+		margin-top: 30px
+
+		&::after
+			content: none
+
+	&__p
+		+font(16px, 19px, 400)
+		text-align: center
+		color: $invertColor
+
+	&__h3
+		padding-top: 6px
+		+font(24px, 29px, 700)
+		text-align: center
+		color: $mainColor
+
+.product
+	margin-top: 97px
+	text-align: center
+
+	& p
+		color: #5D5D5D
+		+font(14px, 17px, 300)
+
+	&__caption h4
+		+font(30px, 36px, 400)
+
+	&__caption p
+		color: #9F9F9F
+		margin-top: 6px
+		font-weight: 400
+
+	&__items
+		text-align: start
+		margin-top: 48px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		column-gap: 30px
+
+	&__item
+		position: relative
+		width: 360px
+		background-color: #F8F8F8
+		transition: all ease 500ms
+
+		&:hover
+			transform: scale(1.025)
+
+		&:hover &-img
+			filter: brightness(50%)
+
+		&-img
+			position: relative
+			display: inline-block
+			/* height: 100%  */
+			width: 100%
+			transition: all ease 500ms
+
+			&::after
+				position: absolute
+				content: url('../images/snowbank.png')
+				width: 320px
+				height: 50px
+				left: 0
+				top: 0
+				z-index: 10
+				border: none
+
+		&-caption
+			color: #000
+			display: block
+			margin-top: 25px
+			padding: 0 16px
+			transition: all ease 500ms
+
+			&:hover
+				font-weight: bold
+
+		&-text
+			padding: 13px 16px 0 16px
+
+		&-price
+			padding: 18px 0 20px 16px
+			+font(16px, 19px, 300)
+			color: $mainColor
+
+	&__item:hover &__cart-add
+		color: $invertColor
+		display: flex
+
+	&__cart-add
+		position: absolute
+		top: 188px
+		left: 111px
+		width: 139px
+		height: 44px
+		border: 1px solid $invertColor
+		align-items: center
+		justify-content: space-around
+		display: none
+		font-size: 14px
+
+		&:hover
+			box-shadow: 0 0 15px $invertColor
+
+	&_mb
+		margin-bottom: 30px
+
+.footer
+	margin-top: 96px
+	background-color: $mainTextColor
+	color: #FBFBFB
+
+	&__top
+		height: 341px
+		display: flex
+		justify-content: space-between
+		margin: 0 auto
+		align-items: center
+
+		&-item
+			width: 360px
+			text-align: center
+
+		&-h4
+			+font(20px, 24px, 400)
+			margin-top: 28px
+
+		&-text
+			margin-top: 16px
+			+font(14px, 17px, 100)
+
+	&__main
+		display: flex
+		justify-content: space-between
+		color: $mainTextColor
+		height: 448px
+		background: url("../images/footer__background.png") no-repeat
+		background-position: center bottom
+		background-size: cover
+
+		&-left, &-right
+			width: 360px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			height: 100%
+
+		&-right
+			width: 570px
+
+		&-p
+			margin-top: 32px
+			+font(20px, 24px, 400)
+			text-align: center
+
+		&-title
+			+font(18px, 30px, 400)
+			text-align: center
+
+		&-title span
+			+font(24px, 38px, 700)
+			/* text-align: center  */
+
+		&-input
+			height: calc(100% - 2px)
+			font-size: 14px
+			flex-basis: 70%
+			border-radius: 24.5px 0 0 24.5px
+			border: 0
+			padding-left: 22px
+			padding-right: 10px
+			background: #E1E1E1
+
+		&-button
+			height: 100%
+			font-size: 14px
+			color: $invertColor
+			flex-basis: 30%
+			border: 0
+			border-radius: 0 24.5px 24.5px 0
+			background: $mainColor
+
+			&:hover
+				background: $backgroundColor
+				transition: all ease 500ms
+
+	&__buttom
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 79px
+
+		&-left
+			font-size: 16px
+			color: #FBFBFB
+
+		&-right
+			display: flex
+			justify-content: end
+
+		&-right a
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 32px
+			width: 32px
+			background-color: $invertColor
+			/* display: inline-block  */
+			margin-left: 6px
+
+		&-nets
+			fill: $mainTextColor
+			height: 16px
+			width: 16px
+			transition: all ease 1s
+
+		&-link
+			fill: $mainColor
+			text-align: center
+			align-items: center
+			transition: all ease 1s
+
+		&-link:hover
+			background: $backgroundColor
+			fill: $invertColor
+
+		&-link:hover &-nets
+			// filter: invert() 
+
+			fill: $invertColor
+
+form
+	height: 49px
+	width: 330px
+	margin-top: 32px
+	display: flex
+
+@import "catalog"
+@import "product"
+@import "cart"
+@import "registration"
+@import "media1"
+@import "media2"

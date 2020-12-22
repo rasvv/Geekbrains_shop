@@ -1,0 +1,243 @@
+@media  (max-width: 1139px)
+	.center
+		padding: 0
+	.header
+		width: 100vw
+		padding: 0 32px
+
+	.promo
+		padding: 0
+		height: 370px
+		flex: 1 1
+
+		&__center
+			padding-left: none
+
+			/* padding-right: calc(50% - 800px)  */
+
+		&__left
+			width: 50%
+			// flex-grow: 1
+
+			& img
+				object-fit: contain
+				height: 100%
+				width: 100%
+
+		&__right
+			// flex-grow: 1
+			height: 100%
+			width: 50%
+			justify-content: center
+			padding-left: 40px
+
+		&__caption
+			padding-left: 16px
+			// height: 100%
+
+			&-title
+				+font(44px, 53px, 900)
+
+			&-text
+				+font(24px, 29px, 700)
+
+	.catalog
+		margin-top: 20px
+		column-gap: 20px
+		&-box
+			padding: 0 16px
+		& img
+			// height: 167px
+
+		&__item
+			width: 33.333%
+
+		&__item, &__big
+
+		&__item-caption
+
+		&__big
+			width: 100%
+			margin-top: 20px
+
+			& img
+				width: 100%
+
+			&::after
+				content: none
+
+		&__p
+
+		&__h3
+
+	.product
+		margin-top: 154px
+		padding: 0 16px
+
+		&__items
+			margin-top: 74px
+			column-gap: 16px
+			justify-content: space-around
+
+			&-price
+				+font(16px, 19px, 300)
+
+		&_mb
+			margin-bottom: 16px
+
+	.footer
+		margin-top: 65px
+		width: 100%
+
+		&__top
+			height: 610px
+			padding: 48px 0 64px
+			flex-direction: column
+
+			&-item
+
+			&-h4
+
+			&-text
+
+		&__main
+			height: 614px
+			flex-direction: column
+			align-items: center
+			padding-top: 54px
+			padding-bottom: 140px
+
+			&-left, &-right
+				height: auto
+
+			&-right
+				width: 570px
+
+			&-p
+
+			&-title
+
+			&-title span
+
+			&-input
+
+			&-button
+
+				&:hover
+
+		&__buttom
+			padding: 0 32px
+
+			&-left
+
+			&-right
+
+			&-right a
+
+			&-nets
+
+			&-link
+
+			&-link:hover
+
+			&-link:hover &-nets
+				// filter: invert() 
+
+	.product__footer
+		margin-top: 129px
+
+	.subheader
+		padding: 0 16px
+
+	.filter
+		justify-content: space-between
+		height: 66px
+		padding-left: 16px
+
+		&__item
+			width: 50%
+			&-none
+				display: none
+
+			&-second
+				justify-content: flex-end
+
+	.catalog__product
+		margin-top: 16px
+
+		&-items
+			margin-top: 0px
+
+	.paginator
+		margin: 24px auto 64px
+
+	.slider
+		height: 624px
+
+		&__img
+			height: 100%
+		&__buttton
+			max-height: 47px
+			max-width: 47px
+
+	.description
+		margin: 0 auto
+		width: 100vw
+		height: 600px
+
+		&__text
+			width: 100%
+			padding: 0 24px
+
+		&__long-line
+			width: 641px
+
+		&__filter
+
+	.registration
+		margin-top: 40px
+		padding: 0 16px
+		&__left
+			min-width: 360px
+			width: 50%
+
+		&__right
+			width: 50%
+			padding-left: 22px
+
+	.info
+
+		&__caption
+			+font(16px, 19px, 300)
+
+		&__text
+			+font(16px, 19px, 300)
+
+		&__item
+			+font(16px, 19px, 300)
+
+	.cart
+		display: block
+		margin-top: 59px
+		padding: 0 16px
+		&__left
+			width: 100%
+
+		&__item
+			&-input
+				+font(18px, 22px, 400)
+
+		&__right
+			margin-top: 64px
+			display: flex
+			width: 100%
+			column-gap: 16px
+			// padding: 0 16px
+		&__buttons
+			margin-top: 62px
+			justify-content: center
+			column-gap: 49px
+
+	.adress
+		min-width: 360px
+		width: 100%

@@ -1,0 +1,101 @@
+.slider
+	height: 777px
+	background-color: #F7F7F7
+	text-align: center
+	display: flex
+	justify-content: space-between
+
+.description
+	margin: -64px auto 0
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: 1140px
+	border: 1px solid #EAEAEA
+	box-sizing: border-box
+	background-color: $invertColor
+	position: relative
+	z-index: 5
+
+	&__collection
+		+font(14px, 17px, 300)
+		text-align: center
+		color: $mainColor
+		margin-top: 64px
+
+	&__short-line
+		margin-top: 12px
+		height: 3px
+		width: 63px
+		background-color: $backgroundColor
+
+	&__firm
+		+font(18px, 22px, 300)
+		color: #4D4D4D
+		margin-top: 27px
+
+	&__text
+		+font(14px, 17px, 300)
+		text-align: center
+		color: #5E5E5E
+		width: 555px
+		margin-top: 48px
+
+	&__price
+		+font(24px, 29px, 300)
+		color: #EF5B70
+		margin-top: 32px
+
+	&__long-line
+		margin-top: 65px
+		height: 1px
+		width: 641px
+		background-color: #EAEAEA
+
+	&__filter
+		display: flex
+		justify-content: center
+		margin-top: 65px
+		min-width: 500px
+
+		&-box
+			min-width: 139px
+			position: relative
+			text-align: center
+
+		&-caption
+			min-width: 100px
+
+			&[open]
+				position: absolute
+				padding-top: 0
+				left: 8px
+				top: 0
+				width: 140px
+				text-align: left
+
+	&__button
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 48px
+		margin-bottom: 65px
+
+		& img
+			margin-right: 10px
+			transition: all ease 500ms
+
+		&:hover img
+			filter: brightness(3.5) invert(0)
+			// margin-right: 20px
+			animation-name: cart-moving
+			animation-duration: 0.5s
+			animation-timing-function: ease-in-out
+
+.product__product
+	margin-top: 128px
+
+svg path
+	fill: inherit
+	stroke: inherit
+	stroke-width: inherit
