@@ -1418,6 +1418,10 @@ svg path {
   padding: 0 20px 0 10px;
 }
 
+.gender__label:hover {
+  cursor: pointer;
+}
+
 .info__text {
   margin: 22px 0;
 }
