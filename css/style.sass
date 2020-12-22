@@ -4,6 +4,7 @@
 @import "reset"
 @import "vars"
 @import "mixins"
+@import "keyframes"
 
 .snowflakes
 	display: none
@@ -69,17 +70,27 @@ ul
 	&__center
 		padding-left: calc(50% - 800px)
 		/* padding-right: calc(50% - 800px)  */
-
-	&__left img
+	&__left
+		width: 50%
+		display: flex
+		justify-content: center
 		height: 100%
+		text-align: center
+
+		& img
+			height: 100%
+			// min-width: 100%
+			object-fit: contain
+			// object-position: center
+			// text-align: center
 
 	&__right
 		display: flex
 		align-items: center
-		width: 100%
+		width: 50%
 		height: 100%
 		background-color: #F1E4E6
-		padding-left: 91px
+		padding-left: 63px
 		position: relative
 
 	&__caption
@@ -346,7 +357,9 @@ summary::-webkit-details-marker
 		justify-content: space-between
 		color: $mainTextColor
 		height: 448px
-		background: url("../images/footer__background.png") 0 0/100% 100% no-repeat
+		background: url("../images/footer__background.png") no-repeat
+		background-position: center bottom
+		background-size: cover
 
 		&-left, &-right
 			width: 360px

@@ -50,7 +50,7 @@
 		&:hover svg path
 			fill: $invertColor
 
-	&__right *
+	&__right
 		width: 652px
 		text-align: start
 		+font(24px, 29px, 300)
@@ -71,12 +71,20 @@
 		+font(11px, 25px, 300)
 		padding: 0 20px 0 10px
 
-.info__text
-	margin: 22px 0
+.info
+	&__caption
+		+font(24px, 28px, 300)
 
-.info__item
-	margin-top: 16px
+	&__text
+		margin: 22px 0
 
-	&::before
-		content: url("../images/Check.svg")
-		margin-right: 22px
+	&__item
+		margin-top: 16px
+		margin-left: 40px
+		position: relative
+
+		&::before
+			position: absolute
+			left: -40px
+			top: 5px
+			content: url("../images/Check.svg")

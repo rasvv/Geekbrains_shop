@@ -1,4 +1,5 @@
 @media  (max-width: 1139px)
+
 	.center
 		padding: 0
 	.header
@@ -16,6 +17,7 @@
 			/* padding-right: calc(50% - 800px)  */
 
 		&__left
+			width: 50%
 			// flex-grow: 1
 
 			& img
@@ -26,6 +28,7 @@
 		&__right
 			// flex-grow: 1
 			height: 100%
+			width: 50%
 			justify-content: center
 			padding-left: 40px
 
@@ -71,41 +74,15 @@
 	.product
 		margin-top: 154px
 		padding: 0 16px
-		& p
-
-		&__caption h4
-
-		&__caption p
 
 		&__items
 			margin-top: 74px
 			column-gap: 16px
 			justify-content: space-around
-		&__item
-
-			&:hover
-
-			&:hover &-img
-
-			&-img
-
-				&::after
-
-			&-caption
-
-				&:hover
-
-			&-text
 
 			&-price
 
 				+font(16px, 19px, 300)
-
-		&__item:hover &__cart-add
-
-		&__cart-add
-
-			&:hover
 
 		&_mb
 			margin-bottom: 16px
@@ -168,6 +145,9 @@
 			&-link:hover &-nets
 				// filter: invert() 
 
+	.product__footer
+		margin-top: 129px
+
 	.subheader
 		padding: 0 16px
 
@@ -206,3 +186,62 @@
 		&__text
 			width: 100%
 			padding: 0 24px
+
+		&__long-line
+			width: 641px
+
+		&__filter
+			width: 350px
+			&-box
+				min-width: 110px
+			&-caption
+				+font(10px, 12px, 400)
+				min-width: 80px
+
+	.registration
+		margin-top: 40px
+		padding: 0 16px
+		&__left
+			min-width: 360px
+			width: 50%
+
+		&__right
+			width: 50%
+			padding-left: 22px
+
+	.info
+
+		&__caption
+			+font(16px, 19px, 300)
+
+		&__text
+			+font(16px, 19px, 300)
+
+		&__item
+			+font(16px, 19px, 300)
+
+	.cart
+		display: block
+		margin-top: 59px
+		padding: 0 16px
+		&__left
+			width: 100%
+
+		&__item
+			&-input
+				+font(18px, 22px, 400)
+
+		&__right
+			margin-top: 64px
+			display: flex
+			width: 100%
+			column-gap: 16px
+			// padding: 0 16px
+		&__buttons
+			margin-top: 62px
+			justify-content: center
+			column-gap: 49px
+
+	.adress
+		min-width: 360px
+		width: 100%
