@@ -49,7 +49,7 @@
 			<a class="header__link" href="#"><img class="header__icon" src="images/search.svg" alt="Search"></a>
 		</div>
 		<div class="header__right">
-			<a class="header__link" href="#"><img class="header__icons" src="images/menu.svg" alt="Menu"></a>
+			<a class="header__link" href="#"><img class="header__icon" src="images/menu.svg" alt="Menu"></a>
 			<a class="header__link header__link-registration" href="registration.html"><img class="header__icons" src="images/users.svg"	alt="User"></a>
 			<a class="header__link header__link-cart" href="cart.html"><img class="header__icons" src="images/basket.svg" alt="Basket"></a>
 		</div>
@@ -59,16 +59,16 @@
 
 	<section class="subheader center">
 		<div class="subheader__left subheader__left-cart">
-			<div class="subheader__caption subheader__caption-cart">
+			<h1 class="subheader__caption subheader__caption-cart">
 				SHOPPING CART
-			</div>
+			</h1>
 		</div>
 		<div class="subheader__right">
 
 		</div>
 	</section>
 
-	<section class="cart center">
+	<div class="cart center">
 		<div class="cart__left">
 			<div class="cart__items">
 
@@ -84,7 +84,7 @@
 						<div class="item__text cart__item-color">Color: Red</div>
 						<div class="item__text cart__item-size">Size: Xl</div>
 						<div class="item__text cart__item-quantity">Quantity:
-							<input class="cart__item-input" type="number" name="" id="" placeholder="2">
+							<input class="cart__item-input" type="number" name="cart-item1" id="cart-item1" placeholder="2">
 						</div>
 					</div>
 				</div>
@@ -101,7 +101,7 @@
 						<div class="item__text cart__item-color">Color: Red</div>
 						<div class="item__text cart__item-size">Size: Xl</div>
 						<div class="item__text cart__item-quantity">Quantity:
-							<input class="cart__item-input" type="number" name="" id="" placeholder="2">
+							<input class="cart__item-input" type="number" name="cart-item2" id="cart-item2" placeholder="2">
 						</div>
 					</div>
 				</div>
@@ -118,14 +118,14 @@
 						<div class="item__text cart__item-color">Color: Red</div>
 						<div class="item__text cart__item-size">Size: Xl</div>
 						<div class="item__text cart__item-quantity">Quantity:
-							<input class="cart__item-input" type="number" name="" id="" placeholder="2">
+							<input class="cart__item-input" type="number" name="cart-item3" id="cart-item3" placeholder="2">
 						</div>
 					</div>
 				</div>
 
 				<div class="cart__buttons">
-					<a href="#" class="button cart__button">Clear shopping cart</a>
-					<a href="#" class="button cart__button">Continiue shopping</a>
+					<a href="#" class="button cart__button">CLEAR SHOPPING CART</a>
+					<a href="#" class="button cart__button">CONTINUE SHOPPING</a>
 				</div>
 
 
@@ -134,10 +134,10 @@
 		<div class="cart__right">
 			<div class="adress">
 				<div class="adress__caption">SHIPPING ADRESS</div>
-				<input class="adress__text fill" type="text" name="country" id="" placeholder="Country">
-				<input class="adress__text" type="text" name="state" id="" placeholder="State">
-				<input class="adress__text" type="text" name="code" id="" placeholder="Postcode / Zip">
-				<a href="#" class="button cart__button adress__button">Get a quote</a>
+				<input class="adress__text fill" type="text" name="country" id="country" placeholder="Country">
+				<input class="adress__text" type="text" name="state" id="state" placeholder="State">
+				<input class="adress__text" type="text" name="code" id="code" placeholder="Postcode / Zip">
+				<a href="#" class="button cart__button adress__button">GET A QUOTE</a>
 			</div>
 			<div class="summary">
 				<div class="summary__subtotal">
@@ -148,12 +148,11 @@
 					<div class="summary__total-label">GRAND TOTAL</div>
 					<div class="summary__total-price">$900</div>
 				</div>
-				<div class="summary__line"></div>
 				<a href="#" class="button cart__button summary__button">PROCEED TO CHECKOUT</a>
 			</div>
 
 		</div>
-	</section>
+	</div>
 
 
 	<footer class="footer">
@@ -163,7 +162,7 @@
 			<div class="footer__main-left">
 				<img src="images/footer/face.png" alt="Face">
 				<p class="footer__main-p">
-					“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+					Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum
 				</p>
 			</div>
 			<div class="footer__main-right">
@@ -172,7 +171,7 @@
 					FOR OUR NEWLETTER AND PROMOTION
 				</div>
 				<form action="#">
-					<input class="footer__main-input" type="email" placeholder="Enter Your Email">
+					<input class="footer__main-input" type="email" id="mail" placeholder="Enter Your Email">
 					<button class="footer__main-button" type="submit">Subscribe</button>
 				</form>
 			</div>

@@ -1,5 +1,4 @@
 @media  (max-width: 767px)
-
 	.center
 
 	.header
@@ -197,6 +196,8 @@
 			margin-top: 20px
 
 	.filter
+		&__caption
+			+font(12px, 14px, 400)
 		&__caption-first
 			height: 100%
 			width: 100%
@@ -211,7 +212,7 @@
 				color: $invertColor
 				display: block
 				padding: 0
-				+font(12px, 14px, 400)
+
 				& img
 					margin-left: -55px
 					padding: 0
@@ -221,9 +222,17 @@
 					object-fit: cover
 
 	.slider
-		& img
+		position: relative
+		&__img
 			width: 100%
 			object-fit: contain
+
+		&__button
+			position: absolute
+			z-index: 10
+			top: calc(50% - 24px)
+			&:last-child
+				right: 0
 
 	.description
 		&__long-line
@@ -231,7 +240,13 @@
 			width: 174px
 			padding: 0 100px
 		&__filter
+			width: 350px
 			margin-top: 50px
+			&-box
+				min-width: 110px
+			&-caption
+				+font(10px, 12px, 400)
+				min-width: 80px
 
 		&__button
 			margin-top: 64px
@@ -302,6 +317,7 @@
 		&__close
 			top: 17px
 			right: 12px
+
 	.summary
 		width: 100%
 		&__button

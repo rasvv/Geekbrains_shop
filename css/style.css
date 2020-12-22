@@ -950,8 +950,8 @@ form {
 
 .filter__item-caption img {
   position: absolute;
-  left: 50px;
-  top: 0px;
+  left: 65px;
+  top: 3px;
 }
 
 .filter__item-caption::after {
@@ -1081,6 +1081,12 @@ summary::after {
   height: 777px;
   background-color: #F7F7F7;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .description {
@@ -1529,6 +1535,10 @@ svg path {
   padding: 0 20px 0 10px;
 }
 
+.gender__label:hover {
+  cursor: pointer;
+}
+
 .info__caption {
   font-size: 24px;
   line-height: 28px;
@@ -1710,8 +1720,12 @@ svg path {
   .slider {
     height: 624px;
   }
-  .slider img {
+  .slider__img {
     height: 100%;
+  }
+  .slider__buttton {
+    max-height: 47px;
+    max-width: 47px;
   }
   .description {
     margin: 0 auto;
@@ -1724,18 +1738,6 @@ svg path {
   }
   .description__long-line {
     width: 641px;
-  }
-  .description__filter {
-    width: 350px;
-  }
-  .description__filter-box {
-    min-width: 110px;
-  }
-  .description__filter-caption {
-    font-size: 10px;
-    line-height: 12px;
-    font-weight: 400;
-    min-width: 80px;
   }
   .registration {
     margin-top: 40px;
@@ -1947,6 +1949,11 @@ svg path {
   .subheader__path {
     margin-top: 20px;
   }
+  .filter__caption {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+  }
   .filter__caption-first {
     height: 100%;
     width: 100%;
@@ -1961,9 +1968,6 @@ svg path {
     color: #fff;
     display: block;
     padding: 0;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 400;
   }
   .filter__item-caption img {
     margin-left: -55px;
@@ -1974,10 +1978,21 @@ svg path {
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .slider img {
+  .slider {
+    position: relative;
+  }
+  .slider__img {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  .slider__button {
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 24px);
+  }
+  .slider__button:last-child {
+    right: 0;
   }
   .description__long-line {
     margin-top: 32px;
@@ -1985,7 +2000,17 @@ svg path {
     padding: 0 100px;
   }
   .description__filter {
+    width: 350px;
     margin-top: 50px;
+  }
+  .description__filter-box {
+    min-width: 110px;
+  }
+  .description__filter-caption {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+    min-width: 80px;
   }
   .description__button {
     margin-top: 64px;
