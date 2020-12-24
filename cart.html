@@ -43,19 +43,57 @@
 		❄
 		</div>
 	 </div>
+
 	<header class="header center">
 		<div class="header__left">
-			<a class="header__link" href="index.html"><img class="header__icon" src="images/Logo.svg" alt="Logo"></a>
-			<a class="header__link" href="#"><img class="header__icon" src="images/search.svg" alt="Search"></a>
+			<a class="header__link" href="index.html"><img class="header__icons" src="images/Logo.svg" alt="Logo"></a>
+			<a class="header__link" href="#"><img class="header__icons" src="images/search.svg" alt="Search"></a>
 		</div>
 		<div class="header__right">
-			<a class="header__link" href="#"><img class="header__icon" src="images/menu.svg" alt="Menu"></a>
+			<input type="checkbox" name="" id="switcher">
+			<label for="switcher"><img class="header__icons" src="images/menu.svg" alt="Menu"></label>
+			<nav class="menu header__menu">
+				<a href="#" class="button__close menu__close"><img src="images/Close.svg" alt="close"></a>
+				<details class="menu__caption" open>
+					<summary class="menu__item-caption">MENU</summary>
+					<details open>
+						<summary class="menu__item-name">MAN</summary>
+						<ul>
+							<li><a href="catalog.html">Accessories</a></li>
+							<li><a href="catalog.html">Bags</a></li>
+							<li><a href="catalog.html">Denim</a></li>
+							<li><a href="catalog.html">T-Shirts</a></li>
+						</ul>
+					</details>
+					<details open>
+						<summary class="menu__item-name">WOMAN</summary>
+						<ul>
+							<li><a href="catalog.html">Accessories</a></li>
+							<li><a href="catalog.html">Jackets & Coats</a></li>
+							<li><a href="catalog.html">Polos</a></li>
+							<li><a href="catalog.html">Shirts</a></li>
+							<li><a href="catalog.html">T-Shirts</a></li>
+						</ul>
+					</details>
+					<details open>
+						<summary class="menu__item-name">KIDS</summary>
+						<ul>
+							<li><a href="catalog.html">Accessories</a></li>
+							<li><a href="catalog.html">Bags</a></li>
+							<li><a href="catalog.html">Jackets & Coats</a></li>
+							<li><a href="catalog.html">Polos</a></li>
+							<li><a href="catalog.html">Shirts</a></li>
+							<li><a href="catalog.html">T-Shirts</a></li>
+						</ul>
+					</details>
+				</details>
+			</nav>
+
 			<a class="header__link header__link-registration" href="registration.html"><img class="header__icons" src="images/users.svg"	alt="User"></a>
 			<a class="header__link header__link-cart" href="cart.html"><img class="header__icons" src="images/basket.svg" alt="Basket"></a>
 		</div>
-
+	
 	</header>
-
 
 	<section class="subheader center">
 		<div class="subheader__left subheader__left-cart">
@@ -154,10 +192,7 @@
 		</div>
 	</div>
 
-
 	<footer class="footer">
-
-
 		<div class="footer__main center">
 			<div class="footer__main-left">
 				<img src="images/footer/face.png" alt="Face">
